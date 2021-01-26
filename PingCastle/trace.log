@@ -1,0 +1,58 @@
+After parsing arguments
+Things to do OK
+[New run]2020-05-22 12:56:13Z
+PingCastle version 2.8.1.0
+Running on dotnet:4.0.30319.42000
+Starting Scanner at:22/05/2020 12:56:13
+[12:56:13] Running scanner aclcheck
+[12:56:13] Starting
+Before establishing connection
+Trying ADWS connection
+Trying to locate the domain
+Unable to connect to ADWS - trying LDAP
+Trying to locate the domain
+LDAP exception: Nome utente o password non corretta.
+(System.Security.Authentication.AuthenticationException)
+   in System.DirectoryServices.ActiveDirectory.PropertyManager.GetPropertyValue(DirectoryContext context, DirectoryEntry directoryEntry, String propertyName)
+   in System.DirectoryServices.ActiveDirectory.Domain.GetDomain(DirectoryContext context)
+   in PingCastle.ADWS.LDAPConnection.EstablishConnection() in c:\git\PingCastle\ADWS\LDAPConnection.cs:riga 186
+   in PingCastle.ADWS.ADWebService.EstablishConnection() in c:\git\PingCastle\ADWS\ADWebService.cs:riga 104
+Throwing ADWS Exception again
+[Red][12:56:14] An exception occured when doing the task: Scanner
+[Red]Active Directory not Found: Nome utente o password non corretta.
+
+Stoping Scanner at: 22/05/2020 12:56:14
+The task Scanner took 00:00:00.4961959
+After parsing arguments
+Things to do OK
+[New run]2020-05-22 13:03:59Z
+PingCastle version 2.8.1.0
+Running on dotnet:4.0.30319.42000
+Starting Scanner at:22/05/2020 13:03:59
+[13:03:59] Running scanner aclcheck
+[13:03:59] Starting
+Before establishing connection
+Trying ADWS connection
+Trying to locate the domain
+Unable to get the domain info - trying direct connection
+Exception: Impossibile trovare o contattare il dominio specificato.
+Connecting to net.tcp://produceict-dc01.produceict.local:9389/ActiveDirectoryWebServices/Windows/Resource
+Unable to connect to ADWS - trying LDAP
+Trying to locate the domain
+DcGetDCName was unable to find a DC using the FQDN - using the fqdn as server name
+LDAP exception: Nome utente o password non corretta.
+(System.DirectoryServices.DirectoryServicesCOMException)
+COMException: -2147023570
+   in System.DirectoryServices.DirectoryEntry.Bind(Boolean throwIfFail)
+   in System.DirectoryServices.DirectoryEntry.Bind()
+   in System.DirectoryServices.DirectoryEntry.get_AdsObject()
+   in System.DirectoryServices.PropertyCollection.get_Count()
+   in PingCastle.ADWS.LDAPConnection.GetLDAPDomainInfo() in c:\git\PingCastle\ADWS\LDAPConnection.cs:riga 158
+   in PingCastle.ADWS.ADConnection.GetDomainInfo() in c:\git\PingCastle\ADWS\ADConnection.cs:riga 33
+   in PingCastle.ADWS.LDAPConnection.EstablishConnection() in c:\git\PingCastle\ADWS\LDAPConnection.cs:riga 194
+   in PingCastle.ADWS.ADWebService.EstablishConnection() in c:\git\PingCastle\ADWS\ADWebService.cs:riga 104
+Throwing ADWS Exception again
+[Red][13:03:59] An exception occured when doing the task: Scanner
+[Red]Active Directory not Found: Il server ha rifiutato le credenziali del client.
+Stoping Scanner at: 22/05/2020 13:03:59
+The task Scanner took 00:00:00.6646191
