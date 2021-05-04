@@ -1,4 +1,6 @@
 # Monitor-AD
+![immagine](https://user-images.githubusercontent.com/56889513/117015451-0ae86e80-acf2-11eb-84df-9b332be3feec.png)
+
 The best way is just to double click on PingCastle.exe
 
 This run the program in a mode called the “interactive mode”.
